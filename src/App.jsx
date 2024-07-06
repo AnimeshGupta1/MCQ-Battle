@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Login from "./components/Login";
 import Registration from "./components/RegisterUser";
+import Header from "./components/Header";
 
 const App = () => {
     return (
@@ -11,9 +12,10 @@ const App = () => {
             <div className="app">
                 {/* Your Header component or placeholder */}
                 <Routes>
+                    <Route path="/landing" element={<Header />} />
                     <Route path="/login" element={<Login />} />
-            {/* Add more routes as needed */}
-                  <Route path="/registerUsers" element={<Registration />} />
+                    {/* Add more routes as needed */}
+                    <Route path="/registerUsers" element={<Registration />} />
                 </Routes>
             </div>
         </Router>
